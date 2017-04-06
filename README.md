@@ -36,7 +36,6 @@ Angular是为了扩展HTML在构建应用时本应具备的能力而设计的。
 >
 > 类似JavaScript 表达式，可以包含文字、运算符和变量。
 > ### 1.示例（数字、字符串、对象、数组）
-> 实例 {{ 5 + 5 }} 或 {{ firstName + " " + lastName }}
 >
     1.<body>
 		<div ng-app="" ng-init="quantity=1;cost=5">
@@ -64,3 +63,24 @@ Angular是为了扩展HTML在构建应用时本应具备的能力而设计的。
 > 与 JavaScript 表达式不同，AngularJS 表达式可以写在 HTML 中。
 > 与 JavaScript 表达式不同，AngularJS 表达式不支持条件判断，循环及异常。
 > 与 JavaScript 表达式不同，AngularJS 表达式支持过滤器。
+
+---
+
+> # 三、AngularJS 指令
+> AngularJS 指令是扩展的 HTML 属性，带有前缀 ng-
+>
+> AngularJS 通过内置的指令来为应用添加功能。 允许你自定义指令。
+>
+> ### 示例
+> 1. ng-app 指令初始化一个 AngularJS 应用程序。ng-app 指令告诉 AngularJS，<div> 元素是 AngularJS 应用程序 的"所有者"。
+> 2. ng-init 指令初始化应用程序数据。
+> 3. ng-model 指令把元素值（比如输入域的值）绑定到应用程序
+>
+	<div ng-app="" ng-init="firstName='John'">
+		 <p>在输入框中尝试输入：</p>
+		 <p>姓名：<input type="text" ng-model="firstName"></p>
+		 <p>你输入的为： {{ firstName }}</p>
+	</div>
+> 完整的指令内容可以参阅 [AngularJS][angularJs0] 参考手册。
+
+[angularJs0][http://www.runoob.com/angularjs/angularjs-reference.html,"http://www.runoob.com/angularjs/angularjs-reference.html"]
