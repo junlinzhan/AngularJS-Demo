@@ -38,7 +38,7 @@ Angular是为了扩展HTML在构建应用时本应具备的能力而设计的。
 > ### 1.示例（数字、字符串、对象、数组）
 > 实例 {{ 5 + 5 }} 或 {{ firstName + " " + lastName }}
       	1.
-	<body>
+    <body>
 		<div ng-app="" ng-init="quantity=1;cost=5">
 		<p>总价： {{ quantity * cost }}</p>
 		</div>
