@@ -36,7 +36,7 @@ Angular是为了扩展HTML在构建应用时本应具备的能力而设计的。
 >
 > 类似JavaScript 表达式，可以包含文字、运算符和变量。
 > #### 示例
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8">
