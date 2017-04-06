@@ -71,7 +71,7 @@ Angular是为了扩展HTML在构建应用时本应具备的能力而设计的。
 >
 > AngularJS 通过内置的指令来为应用添加功能。 允许你自定义指令。
 >
-> ### 示例
+> ### 1.示例
 > 1. ng-app 指令初始化一个 AngularJS 应用程序。ng-app 指令告诉 AngularJS，<div> 元素是 AngularJS 应用程序 的"所有者"。
 > 2. ng-init 指令初始化应用程序数据。
 > 3. ng-model 指令把元素值（比如输入域的值）绑定到应用程序
@@ -81,6 +81,28 @@ Angular是为了扩展HTML在构建应用时本应具备的能力而设计的。
 		 <p>姓名：<input type="text" ng-model="firstName"></p>
 		 <p>你输入的为： {{ firstName }}</p>
 	</div>
+>
+> ### 2.创建自定义的指令
+> 除了 AngularJS 内置的指令外，我们还可以创建自定义指令。你可以使用 .directive 函数来添加自定义的指令。要调用自定义指令，HTML 元素上需要添加自定义指令名。runoobDirective, 但在使用它时需要以 - 分割, runoob-directive:
+> 限制使用 你可以限制你的指令只能通过特定的方式来调用。restrict 值可以是以下几种:
+> E 作为元素名使用
+> A 作为属性使用
+> C 作为类名使用
+> M 作为注释使用
+> restrict 默认值为 EA, 即可以通过元素名和属性名来调用指令。
+> 
+	<body ng-app="myApp">
+	<runoob-directive></runoob-directive>
+	<script>
+		var app = angular.module("myApp", []);
+		app.directive("runoobDirective", function() {
+			return {
+				restrict : "A",
+				template : "<h1>自定义指令!</h1>"
+			};
+		});
+	</script>
+	</body>
 > 完整的指令内容可以参阅 [AngularJS][angularJs0] 参考手册。
 
 [angularJs0]: http://www.runoob.com/angularjs/angularjs-reference.html "http://www.runoob.com/angularjs/angularjs-reference.html"
