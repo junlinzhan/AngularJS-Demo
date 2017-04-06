@@ -37,8 +37,8 @@ Angular是为了扩展HTML在构建应用时本应具备的能力而设计的。
 > 类似JavaScript 表达式，可以包含文字、运算符和变量。
 > ### 1.示例（数字、字符串、对象、数组）
 > 实例 {{ 5 + 5 }} 或 {{ firstName + " " + lastName }}
-      1.
-      <body>
+>      1.
+>      <body>
         <div ng-app="" ng-init="quantity=1;cost=5">
 		<p>总价： {{ quantity * cost }}</p>
 		</div>
