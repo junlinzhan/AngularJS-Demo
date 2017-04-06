@@ -35,18 +35,33 @@ Angular是为了扩展HTML在构建应用时本应具备的能力而设计的。
 > 与 ng-bind 指令有异曲同工之妙。
 >
 > 类似JavaScript 表达式，可以包含文字、运算符和变量。
-> #### 示例
-	<!DOCTYPE html>
-	<html>
-	<head>
-	<meta charset="utf-8">
-	<script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
-	</head>
+> ### 1.示例（数字、字符串、对象、数组）
+> 实例 {{ 5 + 5 }} 或 {{ firstName + " " + lastName }}
+	1.
 	<body>
-		<div ng-app="">
-			<p>我的第一个表达式: {{ 5 + 5 }}</p>
+		<div ng-app="" ng-init="quantity=1;cost=5">
+		<p>总价： {{ quantity * cost }}</p>
 		</div>
 	</body>
-	</html>
+	2.
+	<body>
+		<div ng-app="" ng-init="quantity='firstName';cost='lastName'">
+		<p>字符串拼接： {{ quantity + cost }}</p>
+		</div>
+	</body>
+	3.<body>
+		<div ng-app="" ng-init="person={firstName:'John',lastName:'Doe'}">
+		<p>姓名： {{ person.firstName + person.lastName }}</p>
+		</div>
+	</body>
+	4.<body>
+		<div ng-app="" ng-init="points=[1,15,19,2,40]">
+ 		<p>第三个值为 {{ points[2] }}</p>
+		</div>
+	</body>
 
-
+> ### 2.AngularJS 表达式 与 JavaScript 表达式
+> 类似于 JavaScript 表达式，AngularJS 表达式可以包含字母，操作符，变量。
+> 与 JavaScript 表达式不同，AngularJS 表达式可以写在 HTML 中。
+> 与 JavaScript 表达式不同，AngularJS 表达式不支持条件判断，循环及异常。
+> 与 JavaScript 表达式不同，AngularJS 表达式支持过滤器。
