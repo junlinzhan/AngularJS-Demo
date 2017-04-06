@@ -36,18 +36,16 @@ Angular是为了扩展HTML在构建应用时本应具备的能力而设计的。
 >
 > 类似JavaScript 表达式，可以包含文字、运算符和变量。
 > #### 示例
->     class ThreadRunnable implements Runnable {
-	public void run() {
-		try {
-			File file = new File("D://daemon.txt");
-			FileOutputStream out = new FileOutputStream(file);
-			out.write("daemon".getBytes());
-			out.close();
-			System.out.println("写入完成!");
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-	}
-}
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+</head>
+<body>
+	<div ng-app="">
+		<p>我的第一个表达式: {{ 5 + 5 }}</p>
+	</div>
+</body>
+</html>
+
