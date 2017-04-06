@@ -83,4 +83,4 @@ Angular是为了扩展HTML在构建应用时本应具备的能力而设计的。
 	</div>
 > 完整的指令内容可以参阅 [AngularJS][angularJs0] 参考手册。
 
-[angularJs0][http://www.runoob.com/angularjs/angularjs-reference.html,"http://www.runoob.com/angularjs/angularjs-reference.html"]
+[angularJs0]: http://www.runoob.com/angularjs/angularjs-reference.html "http://www.runoob.com/angularjs/angularjs-reference.html"
