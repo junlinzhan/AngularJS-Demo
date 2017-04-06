@@ -84,11 +84,17 @@ Angular是为了扩展HTML在构建应用时本应具备的能力而设计的。
 >
 > ### 2.创建自定义的指令
 > 除了 AngularJS 内置的指令外，我们还可以创建自定义指令。你可以使用 .directive 函数来添加自定义的指令。要调用自定义指令，HTML 元素上需要添加自定义指令名。runoobDirective, 但在使用它时需要以 - 分割, runoob-directive:
+>
 > 限制使用 你可以限制你的指令只能通过特定的方式来调用。restrict 值可以是以下几种:
+>
 > E 作为元素名使用
+>
 > A 作为属性使用
+>
 > C 作为类名使用
+>
 > M 作为注释使用
+>
 > restrict 默认值为 EA, 即可以通过元素名和属性名来调用指令。
 > 
 	<body ng-app="myApp">
@@ -104,5 +110,60 @@ Angular是为了扩展HTML在构建应用时本应具备的能力而设计的。
 	</script>
 	</body>
 > 完整的指令内容可以参阅 [AngularJS][angularJs0] 参考手册。
+
+---
+
+> # 四、AngularJS模型
+> ng-model 指令可以将输入域的值与 AngularJS 创建的变量绑定。
+>
+> 双向绑定，在修改输入域的值时， AngularJS 属性的值也将修改：
+> 
+> ### 1.实例
+> #### 双向绑定
+>
+	<div ng-app="myApp" ng-controller="myCtrl">
+		名字: <input ng-model="name">
+	</div>
+	<script>
+		var app = angular.module('myApp', []);
+		app.controller('myCtrl', function($scope) {
+			$scope.name = "John Doe";
+		});
+	</script>
+>
+> #### 验证用户输入
+>
+	<form ng-app="" name="myForm">
+		Email:
+		<input type="email" name="myAddress" ng-model="text">
+		<span ng-show="myForm.myAddress.$error.email">不是一个合法的邮箱地址</span>
+	</form>
+>
+> #### 应用状态
+>
+	<form ng-app="" name="myForm" ng-init="myText = 'test@runoob.com'">
+		Email:
+		<input type="email" name="myAddress" ng-model="myText" required></p>
+		<h1>状态</h1>
+		{{myForm.myAddress.$valid}}
+		{{myForm.myAddress.$dirty}}
+		{{myForm.myAddress.$touched}}
+	</form>
+>
+> #### CSS 类
+>
+	<style>
+		input.ng-invalid {
+			background-color: lightblue;
+		}
+	</style>
+	<body>
+	<form ng-app="" name="myForm">
+		输入你的名字:
+		<input name="myAddress" ng-model="text" required>
+	</form>
+>
+
+
 
 [angularJs0]: http://www.runoob.com/angularjs/angularjs-reference.html "http://www.runoob.com/angularjs/angularjs-reference.html"
