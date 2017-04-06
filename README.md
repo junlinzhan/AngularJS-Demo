@@ -29,6 +29,24 @@ Angular是为了扩展HTML在构建应用时本应具备的能力而设计的。
 
 > # 二、AngularJS 表达式
 > AngularJS 使用 表达式 把数据绑定到 HTML。
+>
 > AngularJS 表达式写在双大括号内：{{ expression }}。
+>
 > 与 ng-bind 指令有异曲同工之妙。
+>
 > 类似JavaScript 表达式，可以包含文字、运算符和变量。
+> # 示例
+>      <!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script> 
+</head>
+<body>
+ 
+<div ng-app="">
+     <p>我的第一个表达式: {{ 5 + 5 }}</p>
+</div>
+ 
+</body>
+</html>
