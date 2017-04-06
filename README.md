@@ -164,6 +164,26 @@ Angular是为了扩展HTML在构建应用时本应具备的能力而设计的。
 	</form>
 >
 
+---
 
+> # 五、AngularJS 作用域
+
+---
+
+> # 六、AngularJS 控制器
+
+---
+
+> # 七、AngularJS 过滤器
+
+---
+
+> # 八、AngularJS Service
+
+---
+
+> # 九、AngularJS Http
+
+---
 
 [angularJs0]: http://www.runoob.com/angularjs/angularjs-reference.html "http://www.runoob.com/angularjs/angularjs-reference.html"
